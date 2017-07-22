@@ -1,5 +1,5 @@
 {
-  "name": "noted",
+  "name": "React-Webpack-Boilerplate",
   "version": "1.0.0",
   "description": "My Boilerplate",
   "main": "src/index.js",
@@ -37,7 +37,9 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "loglevel": "^1.4.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
-  }
+  },
+  "repository": "git@github.com:hbarroso/react-webpack-boilerplate.git"
 }
