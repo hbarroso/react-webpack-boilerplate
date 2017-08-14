@@ -7,7 +7,9 @@
     "watch": "./node_modules/.bin/webpack --env=dev --watch",
     "start": "./node_modules/.bin/webpack-dev-server --env=dev --open",
     "build:dev": "./node_modules/.bin/webpack --env=dev --progress --profile --colors",
-    "build:prod": "./node_modules/.bin/webpack --env=prod --progress --profile --colors -p"
+    "build:prod": "./node_modules/.bin/webpack --env=prod --progress --profile --colors -p",
+    "test": "./node_modules/mocha/bin/mocha --recursive  --require tests/setup.js --compilers js:babel-core/register tests/",
+    "test:watch": "./node_modules/mocha/bin/mocha --recursive --require tests/setup.js -w --compilers js:babel-core/register tests/"
   },
   "author": "Henrique Barroso",
   "license": "ISC",
@@ -40,10 +42,14 @@
   },
   "dependencies": {
     "chai": "^4.1.1",
+    "enzyme": "^2.9.1",
+    "jsdom": "^11.1.0",
     "lodash": "^4.17.4",
     "loglevel": "^1.4.1",
     "mocha": "^3.5.0",
+    "node-jsdom": "^3.1.5",
     "react": "^15.6.1",
+    "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2"

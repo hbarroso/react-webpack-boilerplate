@@ -6,7 +6,7 @@ This is was created as a way to solidify my knowledge regarding front-end stack.
 My goal is to have a clean yet extensible boilerplate.
 
 Currently this boilerplate uses **React**, **Redux**, **Webpack**, **Babel**, **ES6**,
-**SCSS**, **Mocha & Chai**.
+**SCSS**, **Mocha, Chai and Enzyme**.
 
 ## Requirements
 
@@ -28,10 +28,12 @@ From the root folder you will find a folder `config/` which includes three confi
 
 ## Commands
 
-* `yarn run watch` compiles and watches with local development environment .
-* `yarn run start` starts Webpack Dev Server.
-* `yarn run build:dev` compiles for development environment.
-* `yarn run build:prod` compiles for production environment.
+* `yarn watch` compiles and watches with local development environment .
+* `yarn start` starts Webpack Dev Server.
+* `yarn build:dev` compiles for development environment.
+* `yarn build:prod` compiles for production environment.
+* `yarn test` Runs the test suite.
+* `yarn test:watch` Same as `test` but watches for any test/code changes.
 
 ## Server
 
@@ -41,8 +43,8 @@ Whenever you made any changes in your `src/` folder the browser will automatical
 
 ## Testing
 
-This boilerplate includes [Mocha](https://mochajs.org/) and [Chai](https://chaijs.com/).
-All tests should be put under the `tests/` folder. There's currently no bootstrapper for testing :(.
+This boilerplate includes [Mocha](https://mochajs.org/), [Chai](https://chaijs.com/) and [Enzyme](http://airbnb.io/enzyme/).
+All tests should be put under the `tests/` folder. 
 
 ## Folder structure
 
