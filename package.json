@@ -6,8 +6,8 @@
   "scripts": {
     "watch": "./node_modules/.bin/webpack --env=dev --watch",
     "start": "./node_modules/.bin/webpack-dev-server --env=dev --open",
-    "build:dev": "webpack --env=dev --progress --profile --colors",
-    "build:dist": "webpack --env=prod --progress --profile --colors -p"
+    "build:dev": "./node_modules/.bin/webpack --env=dev --progress --profile --colors",
+    "build:prod": "./node_modules/.bin/webpack --env=prod --progress --profile --colors -p"
   },
   "author": "Henrique Barroso",
   "license": "ISC",
@@ -23,11 +23,13 @@
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
     "ejs-loader": "^0.3.0",
+    "eslint-plugin-react": "^7.2.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-harddisk-plugin": "^0.1.0",
     "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.3",
+    "redux-devtools": "^3.4.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "uglify-es": "^3.0.25",
@@ -37,9 +39,14 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "chai": "^4.1.1",
+    "lodash": "^4.17.4",
     "loglevel": "^1.4.1",
+    "mocha": "^3.5.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "repository": "git@github.com:hbarroso/react-webpack-boilerplate.git"
 }

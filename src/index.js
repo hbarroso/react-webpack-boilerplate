@@ -1,13 +1,15 @@
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
-import './style.scss'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import App from './components/App';
+import reducers from './reducers';
+import './styles/common.scss'
 
-class HelloMessage extends Component {
-    render() {
-        return(
-            <h1>okok!</h1>
-        );
-    }
-}
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render(<HelloMessage />, document.querySelector('.container'));
+ReactDOM.render(
+    <Provider store={createStoreWithMiddleware(reducers)}>
+        <App />
+    </Provider>
+    ,document.querySelector('.container'));
